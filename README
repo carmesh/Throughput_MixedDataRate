@@ -1,0 +1,21 @@
+
+- This C++ program allows to compute the aggregated throughput in function of the number of users within a 802.11g cell.
+- To compile the program, type the following command
+	$ g++ -o Ju_MAC_Model_forMixedDataRate Ju_MAC_Model_forMixedDataRate.cpp
+- The program accept as input the number of users operating in different data rates.
+- Since the 802.11g technology supports the following data rates: 6, 9, 12, 18, 24, 36, 48, 54 Mbps, the program accepts 8 arguments.
+- To execute the program, type the following command
+	$ ./Ju_MAC_Model_forMixedDataRate NbrUsr6 NbrUsr9  NbrUsr12 NbrUsr18 NbrUsr24 NbrUsr36 NbrUsr48 NbrUsr54
+        where NbrUsri is the nu,ber of users operating at data rate "i", with i \in {6,9,12,18,24,36,48,54}
+- The output of the program has the following format: " NbrUsr    Ptr    Pc   Thr ", where
+
+NbrUsr: is the total number of user. 
+Ptr   : is the transmission probability
+Pc    : is the collision probability
+Thr   : is the aggregated throughput
+
+- To represent the aggregated throughput in function of the nu,ber of users, use the gnuplot program "MixedDataRate.plot"
+- The gnuplot program accepts as input the file "Mixed_dataRate.dat", which consists of two columns. The first column contains the total number of usersn however, the seond column contains their corresponding data rate 
+- To execute the gnuplot program, type the following command:
+	$ gnuplot MixedDataRate.plot
+
